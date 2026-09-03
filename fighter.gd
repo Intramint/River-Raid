@@ -1,8 +1,11 @@
 extends CharacterBody2D
 class_name Fighter
 
+signal fired(position: Vector2)
+
 @export var move_left: String
 @export var move_right: String
+@export var shoot: String
 @export var speed: float = 800
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,5 +21,8 @@ func _physics_process(delta: float) -> void:
 	var motion: Vector2 = Vector2(direction * speed * delta, 0)
 	move_and_collide(motion)
 	
+	if Input.is_action_just_pressed(shoot):
+		fired.emit(global_position)
+
 func reset(new_position: Vector2):
 	position = new_position
