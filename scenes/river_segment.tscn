@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bjomsasfva68a"]
+
+[ext_resource type="Script" uid="uid://by3cg3mc2hjkf" path="res://scripts/river_segment.gd" id="1_vu4ge"]
+[ext_resource type="PackedScene" uid="uid://dty416wk84021" path="res://scenes/components/scrollable.tscn" id="2_knlpg"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vu4ge"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_khn4m"]
+
+[node name="RiverSegment" type="StaticBody2D" unique_id=1463949709]
+script = ExtResource("1_vu4ge")
+
+[node name="LeftWallCollision" type="CollisionShape2D" parent="." unique_id=1094044361]
+shape = SubResource("SegmentShape2D_vu4ge")
+
+[node name="RightWallCollision" type="CollisionShape2D" parent="." unique_id=468185]
+shape = SubResource("SegmentShape2D_khn4m")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1761506146]
+color = Color(0.08627451, 0.3372549, 1, 1)
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="Scrollable" parent="." unique_id=102370887 instance=ExtResource("2_knlpg")]

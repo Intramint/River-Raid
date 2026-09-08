@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d4j7xe1qi3tfu"]
 
 [ext_resource type="Texture2D" uid="uid://dsrutibrfs8k0" path="res://assets/pixel.png" id="1_efvb3"]
-[ext_resource type="Script" uid="uid://bqcaf2bw0g0qr" path="res://fighter.gd" id="1_umvcx"]
+[ext_resource type="Script" uid="uid://bqcaf2bw0g0qr" path="res://scripts/fighter.gd" id="1_umvcx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
 size = Vector2(59.5, 81.25)

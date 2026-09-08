@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dty416wk84021"]
+
+[ext_resource type="Script" uid="uid://cngfkoje0pamy" path="res://scripts/components/scrollable.gd" id="1_sy58u"]
+
+[node name="Scrollable" type="Node" unique_id=102370887]
+script = ExtResource("1_sy58u")

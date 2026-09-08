@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c4gdlyqcafb3h"]
+
+[ext_resource type="Script" uid="uid://du0yvy77ai5w8" path="res://scripts/river_spawner.gd" id="1_b71eu"]
+
+[node name="RiverSpawner" type="Node" unique_id=895503336]
+script = ExtResource("1_b71eu")
+
+[node name="TopLeftPoint" type="Marker2D" parent="." unique_id=520417455]
+position = Vector2(387, 101)
+
+[node name="BottomLeftPoint" type="Marker2D" parent="." unique_id=2124560390]
+position = Vector2(407, 279)
+
+[node name="TopRightPoint" type="Marker2D" parent="." unique_id=1843898811]
+position = Vector2(944, 114)
+
+[node name="BottomRightPoint" type="Marker2D" parent="." unique_id=1371863895]
+position = Vector2(947, 324)
