@@ -14,6 +14,10 @@ config/name="River Raid"
 run/main_scene="uid://cwpvcrnt0jahi"
 config/features=PackedStringArray("4.7", "Mobile")
 
+[autoload]
+
+GameState="*uid://dr1ifmeurlycq"
+
 [display]
 
 window/size/viewport_width=1920

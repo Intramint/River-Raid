@@ -6,13 +6,13 @@
 script = ExtResource("1_b71eu")
 
 [node name="TopLeftPoint" type="Marker2D" parent="." unique_id=520417455]
-position = Vector2(387, 101)
+position = Vector2(660, -506)
 
 [node name="BottomLeftPoint" type="Marker2D" parent="." unique_id=2124560390]
-position = Vector2(407, 279)
+position = Vector2(660, 0)
 
 [node name="TopRightPoint" type="Marker2D" parent="." unique_id=1843898811]
-position = Vector2(944, 114)
+position = Vector2(1260, -506)
 
 [node name="BottomRightPoint" type="Marker2D" parent="." unique_id=1371863895]
-position = Vector2(947, 324)
+position = Vector2(1260, 0)
