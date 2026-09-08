@@ -4,8 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://dty416wk84021" path="res://scenes/components/scrollable.tscn" id="2_knlpg"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_vu4ge"]
+resource_local_to_scene = true
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_khn4m"]
+resource_local_to_scene = true
 
 [node name="RiverSegment" type="StaticBody2D" unique_id=1463949709]
 script = ExtResource("1_vu4ge")

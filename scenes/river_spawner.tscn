@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://du0yvy77ai5w8" path="res://scripts/river_spawner.gd" id="1_b71eu"]
 
-[node name="RiverSpawner" type="Node" unique_id=895503336]
+[node name="RiverSpawner" type="Node2D" unique_id=252000467]
 script = ExtResource("1_b71eu")
 
 [node name="TopLeftPoint" type="Marker2D" parent="." unique_id=520417455]
