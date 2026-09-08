@@ -2,12 +2,12 @@ extends Node
 
 @onready var segment_height: float = abs($TopLeftPoint.position.y - $BottomLeftPoint.position.y)
 var distance_since_last_segment: float = 0.0
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready() -> void:
 	spawn_segment($TopLeftPoint.position, $TopRightPoint.position, $BottomRightPoint.position, $BottomLeftPoint.position)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	distance_since_last_segment += GameState.SCROLL_SPEED * delta
 	if distance_since_last_segment >= segment_height:
