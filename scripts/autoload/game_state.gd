@@ -1,4 +1,4 @@
 extends Node
 
 
-const SCROLL_SPEED: int = 300
+const SCROLL_SPEED: int = 600
