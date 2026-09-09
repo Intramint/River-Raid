@@ -8,6 +8,7 @@ signal fired(position: Vector2)
 @export var move_left: String
 @export var move_right: String
 @export var shoot: String
+@export var boost: String
 @export var speed: float = 800
 
 
@@ -26,6 +27,11 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed(shoot):
 		fired.emit(Vector2(global_position.x, global_position.y + FIRING_OFFSET))
+	
+	if Input.is_action_pressed(boost):
+		GameState.scroll_speed = GameState.BOOSTED_SCROLL_SPEED
+	else:
+		GameState.scroll_speed = GameState.DEFAULT_SCROLL_SPEED
 
 func reset(new_position: Vector2):
 	position = new_position

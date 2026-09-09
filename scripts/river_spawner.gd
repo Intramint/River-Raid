@@ -34,7 +34,7 @@ func _ready() -> void:
 	y_offset_noise.noise_type = FastNoiseLite.TYPE_SIMPLEX
 
 func _physics_process(delta: float) -> void:
-	distance_since_last_segment += GameState.SCROLL_SPEED * delta
+	distance_since_last_segment += GameState.scroll_speed * delta
 	if distance_since_last_segment >= segment_height:
 		var remainder: float = distance_since_last_segment - segment_height
 		distance_since_last_segment = 0

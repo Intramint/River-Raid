@@ -11,6 +11,7 @@ script = ExtResource("1_umvcx")
 move_left = "left"
 move_right = "right"
 shoot = "shoot"
+boost = "boost"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1149379316]
 scale = Vector2(68, 89.00001)
