@@ -1,10 +1,11 @@
 extends CharacterBody2D
 class_name Enemy
 
-enum Type { SHIP }
+enum Type { SHIP, HELICOPTER }
 
 const SCENES = {
-	Type.SHIP: preload("res://scenes/enemy_ship.tscn")
+	Type.SHIP: preload("res://scenes/enemy_ship.tscn"),
+	Type.HELICOPTER: preload("res://scenes/enemy_helicopter.tscn")
 }
 
 func _physics_process(delta: float) -> void:

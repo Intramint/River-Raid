@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://h7nb7y8rv0v5"]
+
+[ext_resource type="PackedScene" uid="uid://xvwrbume116p" path="res://scenes/enemy.tscn" id="1_mn6oj"]
+[ext_resource type="Script" uid="uid://btcb3yock3tpa" path="res://scripts/enemy_helicopter.gd" id="2_t8byy"]
+[ext_resource type="Texture2D" uid="uid://bwq0g0td3prya" path="res://assets/white pixel.png" id="3_t8byy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdtit"]
+size = Vector2(54, 82)
+
+[node name="EnemyHelicopter" unique_id=236878738 instance=ExtResource("1_mn6oj")]
+script = ExtResource("2_t8byy")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1052039189]
+shape = SubResource("RectangleShape2D_bdtit")
+
+[node name="Sprite2D" parent="." index="1" unique_id=1112567087]
+scale = Vector2(56, 82)
+texture = ExtResource("3_t8byy")
