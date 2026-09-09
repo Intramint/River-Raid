@@ -21,3 +21,4 @@ zoom = Vector2(0.705, 0.705)
 
 [connection signal="segment_generated" from="RiverSpawner" to="EnemySpawner" method="_on_river_spawner_segment_generated"]
 [connection signal="fired" from="Fighter" to="." method="_on_fighter_fired"]
+[connection signal="lost" from="Fighter" to="." method="_on_fighter_lost"]

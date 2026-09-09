@@ -4,6 +4,7 @@ class_name Fighter
 const FIRING_OFFSET: float = -53
 
 signal fired(position: Vector2)
+signal lost
 
 @export var move_left: String
 @export var move_right: String
@@ -23,7 +24,12 @@ func _physics_process(delta: float) -> void:
 		direction += 1
 		
 	var motion: Vector2 = Vector2(direction * speed * delta, 0)
-	move_and_collide(motion)
+	var collision = move_and_collide(motion)
+	
+	if collision: #exclude fuel later
+		if collision.get_collider() is Enemy:
+			collision.get_collider().on_hit()
+		crash()
 	
 	if Input.is_action_just_pressed(shoot):
 		fired.emit(Vector2(global_position.x, global_position.y + FIRING_OFFSET))
@@ -35,3 +41,7 @@ func _physics_process(delta: float) -> void:
 
 func reset(new_position: Vector2):
 	position = new_position
+
+func crash():
+	lost.emit()
+	queue_free()
