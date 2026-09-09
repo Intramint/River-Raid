@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dty416wk84021" path="res://scenes/components/scrollable.tscn" id="3_4ra3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
-size = Vector2(34, 10)
+size = Vector2(86, 14)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=236878738]
 script = ExtResource("1_md0e3")
@@ -14,7 +14,7 @@ script = ExtResource("1_md0e3")
 shape = SubResource("RectangleShape2D_frt5n")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1112567087]
-scale = Vector2(34, 10.125)
+scale = Vector2(86, 14)
 texture = ExtResource("2_4ra3w")
 
 [node name="Scrollable" parent="." unique_id=102370887 instance=ExtResource("3_4ra3w")]
