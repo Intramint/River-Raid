@@ -1,9 +1,17 @@
 extends CharacterBody2D
 class_name Enemy
 
-const SPEED = 300.0
+enum Type { SHIP }
 
-#enum Type { } #fill later
+const SCENES = {
+	Type.SHIP: preload("res://scenes/enemy_ship.tscn")
+}
 
 func _physics_process(delta: float) -> void:
+	move(delta)
+
+func move(delta: float):
 	pass
+
+func on_hit():
+	queue_free()
