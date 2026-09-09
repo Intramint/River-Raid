@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dqgojuekuickc"]
+
+[ext_resource type="Script" uid="uid://dnd2e7yrwv6ys" path="res://scripts/despawn_zone.gd" id="1_wihgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
+size = Vector2(2502, 1554)
+
+[node name="DespawnZone" type="Area2D" unique_id=1047188061]
+script = ExtResource("1_wihgd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1172653122]
+position = Vector2(1061, 434)
+shape = SubResource("RectangleShape2D_frt5n")
+
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
