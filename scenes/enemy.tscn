@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://xvwrbume116p"]
+
+[ext_resource type="Script" uid="uid://xevxju2ru8fu" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://dsrutibrfs8k0" path="res://assets/pixel.png" id="2_4ra3w"]
+[ext_resource type="PackedScene" uid="uid://dty416wk84021" path="res://scenes/components/scrollable.tscn" id="3_4ra3w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
+size = Vector2(34, 10)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=236878738]
+script = ExtResource("1_md0e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1052039189]
+shape = SubResource("RectangleShape2D_frt5n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1112567087]
+scale = Vector2(34, 10.125)
+texture = ExtResource("2_4ra3w")
+
+[node name="Scrollable" parent="." unique_id=102370887 instance=ExtResource("3_4ra3w")]
