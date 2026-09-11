@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	var motion: Vector2 = Vector2(direction * speed * delta, 0)
 	var collision = move_and_collide(motion)
 	
-	if collision: #exclude fuel later
+	if collision:
 		if collision.get_collider() is Enemy:
 			collision.get_collider().on_hit()
 		crash()

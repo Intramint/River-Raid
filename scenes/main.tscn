@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hab4jeghn3c0" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c4gdlyqcafb3h" path="res://scenes/river_spawner.tscn" id="2_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://dbys4dx7rpdj3" path="res://scenes/enemy_spawner.tscn" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dbys4dx7rpdj3" path="res://scenes/spawner.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://scenes/fighter.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://dqgojuekuickc" path="res://scenes/despawn_zone.tscn" id="5_tbgi4"]
 
@@ -11,7 +11,7 @@ script = ExtResource("1_sugp2")
 
 [node name="RiverSpawner" parent="." unique_id=895503336 instance=ExtResource("2_jyhfs")]
 
-[node name="EnemySpawner" parent="." unique_id=1292744447 instance=ExtResource("3_jyhfs")]
+[node name="Spawner" parent="." unique_id=1292744447 instance=ExtResource("3_jyhfs")]
 
 [node name="Fighter" parent="." unique_id=1081159689 instance=ExtResource("3_tbgi4")]
 
@@ -22,6 +22,6 @@ position = Vector2(1034, 517)
 enabled = false
 zoom = Vector2(0.485, 0.485)
 
-[connection signal="segment_generated" from="RiverSpawner" to="EnemySpawner" method="_on_river_spawner_segment_generated"]
+[connection signal="segment_generated" from="RiverSpawner" to="Spawner" method="_on_river_spawner_segment_generated"]
 [connection signal="fired" from="Fighter" to="." method="_on_fighter_fired"]
 [connection signal="lost" from="Fighter" to="." method="_on_fighter_lost"]

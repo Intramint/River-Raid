@@ -6,6 +6,7 @@
 size = Vector2(2502, 1554)
 
 [node name="DespawnZone" type="Area2D" unique_id=1047188061]
+collision_layer = 0
 script = ExtResource("1_wihgd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1172653122]

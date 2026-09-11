@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c5wdt7opfe6c2"]
+
+[ext_resource type="Script" uid="uid://bs4jt6j6jkd10" path="res://scripts/fuel.gd" id="2_vf86o"]
+[ext_resource type="Texture2D" uid="uid://dsrutibrfs8k0" path="res://assets/pixel.png" id="2_vltxq"]
+[ext_resource type="PackedScene" uid="uid://dty416wk84021" path="res://scenes/components/scrollable.tscn" id="3_vf86o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
+size = Vector2(106, 90)
+
+[node name="Fuel" type="Area2D" unique_id=280642893]
+script = ExtResource("2_vf86o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1750845810]
+shape = SubResource("RectangleShape2D_frt5n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1451056928]
+scale = Vector2(106, 90)
+texture = ExtResource("2_vltxq")
+
+[node name="Scrollable" parent="." unique_id=102370887 instance=ExtResource("3_vf86o")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
