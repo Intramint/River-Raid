@@ -32,6 +32,8 @@ func _ready() -> void:
 	y_offset_noise = FastNoiseLite.new()
 	y_offset_noise.seed = randi()
 	y_offset_noise.noise_type = FastNoiseLite.TYPE_SIMPLEX
+	
+	print("x_noise seed: " + str(x_noise.seed) + "\nwidth_noise seed: " + str(width_noise.seed) + "\ny_offset_noise seed " + str(y_offset_noise.seed))
 
 func _physics_process(delta: float) -> void:
 	distance_since_last_segment += GameState.scroll_speed * delta

@@ -7,6 +7,7 @@
 size = Vector2(148, 56)
 
 [node name="EnemyShip" unique_id=236878738 instance=ExtResource("1_6o8wj")]
+collision_mask = 4
 script = ExtResource("2_v70ju")
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=1052039189]

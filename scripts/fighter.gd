@@ -14,6 +14,7 @@ signal lost
 
 
 func _ready() -> void:
+	GameState.out_of_fuel.connect(_on_GameState_out_of_fuel)
 	global_position = Vector2(get_viewport_rect().size.x / 2, get_viewport_rect().size.y - 100)
 
 func _physics_process(delta: float) -> void:
@@ -24,12 +25,7 @@ func _physics_process(delta: float) -> void:
 		direction += 1
 		
 	var motion: Vector2 = Vector2(direction * speed * delta, 0)
-	var collision = move_and_collide(motion)
-	
-	if collision:
-		if collision.get_collider() is Enemy:
-			collision.get_collider().on_hit()
-		crash()
+	move_and_collide(motion)
 	
 	if Input.is_action_just_pressed(shoot):
 		fired.emit(Vector2(global_position.x, global_position.y + FIRING_OFFSET))
@@ -46,6 +42,8 @@ func crash():
 	lost.emit()
 	queue_free()
 
+func _on_GameState_out_of_fuel():
+	crash()
 
 func _on_hurtbox_hurt(source: Node2D) -> void:
 	if source is Enemy:

@@ -10,6 +10,8 @@ resource_local_to_scene = true
 resource_local_to_scene = true
 
 [node name="RiverSegment" type="AnimatableBody2D" unique_id=318889021]
+collision_layer = 4
+collision_mask = 0
 script = ExtResource("1_vu4ge")
 
 [node name="LeftWallCollision" type="CollisionShape2D" parent="." unique_id=1094044361]
