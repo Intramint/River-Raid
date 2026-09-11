@@ -1,7 +1,7 @@
 extends Area2D
 class_name Hurtbox
 
-signal hurt(by: Node2D)
+signal hurt(source: Node2D)
 
 func _on_area_entered(area: Area2D) -> void:
 	hurt.emit(area)

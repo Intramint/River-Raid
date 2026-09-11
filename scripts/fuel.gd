@@ -4,7 +4,6 @@ class_name Fuel
 func on_hit():
 	queue_free()
 
-
-func _on_body_entered(body: Node2D) -> void:
-	if body is Fighter:
-		print("o")
+func _on_area_entered(area: Area2D) -> void:
+	#add fuel
+	queue_free()

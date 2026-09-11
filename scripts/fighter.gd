@@ -45,3 +45,9 @@ func reset(new_position: Vector2):
 func crash():
 	lost.emit()
 	queue_free()
+
+
+func _on_hurtbox_hurt(source: Node2D) -> void:
+	if source is Enemy:
+		source.on_hit()
+	crash()
