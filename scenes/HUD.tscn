@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bgq8uj5ekxtgb"]
+
+[ext_resource type="Script" uid="uid://wgl3dmvwf6ec" path="res://scripts/hud.gd" id="1_qpvh6"]
+
+[node name="Hud" type="CanvasLayer" unique_id=25750805]
+script = ExtResource("1_qpvh6")
+
+[node name="FuelBar" type="ProgressBar" parent="." unique_id=1460208103]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -171.0
+offset_right = 52.0
+offset_bottom = -30.0
+grow_vertical = 0
+fill_mode = 3
+show_percentage = false

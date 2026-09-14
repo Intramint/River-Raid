@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dbys4dx7rpdj3" path="res://scenes/spawner.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://scenes/fighter.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://dqgojuekuickc" path="res://scenes/despawn_zone.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bgq8uj5ekxtgb" path="res://scenes/HUD.tscn" id="6_tefeu"]
 
 [node name="Main" type="Node" unique_id=284678961]
 script = ExtResource("1_sugp2")
@@ -21,6 +22,8 @@ script = ExtResource("1_sugp2")
 position = Vector2(1034, 517)
 enabled = false
 zoom = Vector2(0.485, 0.485)
+
+[node name="Hud" parent="." unique_id=25750805 instance=ExtResource("6_tefeu")]
 
 [connection signal="segment_generated" from="RiverSpawner" to="Spawner" method="_on_river_spawner_segment_generated"]
 [connection signal="fired" from="Fighter" to="." method="_on_fighter_fired"]
