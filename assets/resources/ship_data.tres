@@ -7,4 +7,5 @@
 script = ExtResource("1_rdc8c")
 scene = ExtResource("1_265lr")
 weight = 1.5
+water_spawn = true
 metadata/_custom_type_script = "uid://486uqk1ty737"

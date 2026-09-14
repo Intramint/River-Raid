@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://6phihcf8uk26"]
+
+[ext_resource type="PackedScene" uid="uid://xvwrbume116p" path="res://scenes/enemy.tscn" id="1_cvxtf"]
+[ext_resource type="Script" uid="uid://cvltacjlt0xyw" path="res://scripts/enemy_jet.gd" id="2_ryxjh"]
+[ext_resource type="Texture2D" uid="uid://bwq0g0td3prya" path="res://assets/white pixel.png" id="3_ryxjh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odsnx"]
+size = Vector2(64, 10)
+
+[node name="EnemyJet" unique_id=236878738 instance=ExtResource("1_cvxtf")]
+collision_mask = 0
+script = ExtResource("2_ryxjh")
+point_value = 12
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1052039189]
+shape = SubResource("RectangleShape2D_odsnx")
+
+[node name="Sprite2D" parent="." index="1" unique_id=1112567087]
+scale = Vector2(64, 10)
+texture = ExtResource("3_ryxjh")

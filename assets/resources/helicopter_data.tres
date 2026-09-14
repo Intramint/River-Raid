@@ -1,10 +1,32 @@
 [gd_resource type="Resource" script_class="SpawnableData" format=3 uid="uid://b2dt8kxsrtty2"]
 
-[ext_resource type="PackedScene" uid="uid://h7nb7y8rv0v5" path="res://scenes/enemy_helicopter.tscn" id="1_a6k1a"]
+[ext_resource type="PackedScene" uid="uid://xvwrbume116p" path="res://scenes/enemy.tscn" id="1_eghlr"]
 [ext_resource type="Script" uid="uid://486uqk1ty737" path="res://scripts/spawnable_data.gd" id="1_k7cet"]
+[ext_resource type="Script" uid="uid://btcb3yock3tpa" path="res://scripts/enemy_helicopter.gd" id="2_jw6r0"]
+[ext_resource type="Texture2D" uid="uid://bwq0g0td3prya" path="res://assets/white pixel.png" id="3_84rgb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdtit"]
+size = Vector2(54, 82)
+
+[sub_resource type="PackedScene" id="PackedScene_iy6mx"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array(), PackedInt32Array()],
+"names": PackedStringArray("EnemyHelicopter", "script", "point_value", "CollisionShape2D", "shape", "Sprite2D", "scale", "texture"),
+"node_count": 3,
+"node_ids": PackedInt32Array(236878738, 1052039189, 1112567087),
+"node_paths": [NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 2, 1, 1, 2, 2, 0, 1073741824, -1, 2147483647, 262147, -1, 1, 4, 3, 0, 1073741825, -1, 2147483647, 524293, -1, 2, 6, 4, 7, 5, 0),
+"variants": [ExtResource("1_eghlr"), ExtResource("2_jw6r0"), 8, SubResource("RectangleShape2D_bdtit"), Vector2(56, 82), ExtResource("3_84rgb")],
+"version": 3
+}
 
 [resource]
 script = ExtResource("1_k7cet")
-scene = ExtResource("1_a6k1a")
+scene = SubResource("PackedScene_iy6mx")
 weight = 1.0
+water_spawn = true
 metadata/_custom_type_script = "uid://486uqk1ty737"
