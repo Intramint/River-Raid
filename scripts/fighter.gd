@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Node2D
 class_name Fighter
 
 const FIRING_OFFSET: float = -53
@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		direction += 1
 		
 	var motion: Vector2 = Vector2(direction * speed * delta, 0)
-	move_and_collide(motion)
+	global_position += motion
 	
 	if Input.is_action_just_pressed(shoot):
 		fired.emit(Vector2(global_position.x, global_position.y + FIRING_OFFSET))

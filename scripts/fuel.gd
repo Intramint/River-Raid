@@ -1,6 +1,7 @@
 extends Area2D
 class_name Fuel
 
+@export var data: SpawnableData
 const FUEL_REPLENSHIED: float = 25
 
 func on_hit():

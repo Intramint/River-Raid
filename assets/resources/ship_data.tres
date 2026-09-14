@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SpawnableData" format=3 uid="uid://du7smcdl7r3b"]
+
+[ext_resource type="PackedScene" uid="uid://hmr00n0i67ww" path="res://scenes/enemy_ship.tscn" id="1_265lr"]
+[ext_resource type="Script" uid="uid://486uqk1ty737" path="res://scripts/spawnable_data.gd" id="1_rdc8c"]
+
+[resource]
+script = ExtResource("1_rdc8c")
+scene = ExtResource("1_265lr")
+weight = 1.5
+metadata/_custom_type_script = "uid://486uqk1ty737"

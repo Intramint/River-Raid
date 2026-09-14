@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Enemy
 
+@export var data: SpawnableData
+
 func _physics_process(delta: float) -> void:
 	move(delta)
 
