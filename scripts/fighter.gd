@@ -14,7 +14,7 @@ signal lost
 
 
 func _ready() -> void:
-	GameState.out_of_fuel.connect(_on_GameState_out_of_fuel)
+	GameState.out_of_fuel.connect(_on_game_state_out_of_fuel)
 	global_position = Vector2(get_viewport_rect().size.x / 2, get_viewport_rect().size.y - 100)
 
 func _physics_process(delta: float) -> void:
@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 	global_position += motion
 	
 	if Input.is_action_just_pressed(shoot):
+		GameState.points -= 1
 		fired.emit(Vector2(global_position.x, global_position.y + FIRING_OFFSET))
 	
 	if Input.is_action_pressed(boost):
@@ -42,7 +43,7 @@ func crash():
 	lost.emit()
 	queue_free()
 
-func _on_GameState_out_of_fuel():
+func _on_game_state_out_of_fuel():
 	crash()
 
 func _on_hurtbox_hurt(source: Node2D) -> void:

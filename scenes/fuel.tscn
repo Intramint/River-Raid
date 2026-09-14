@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://c5wdt7opfe6c2"]
 
-[ext_resource type="Resource" uid="uid://dhbwy8xhm2rjw" path="res://assets/resources/fuel_data.tres" id="2_e4cwf"]
 [ext_resource type="Script" uid="uid://bs4jt6j6jkd10" path="res://scripts/fuel.gd" id="2_vf86o"]
 [ext_resource type="Texture2D" uid="uid://dsrutibrfs8k0" path="res://assets/pixel.png" id="2_vltxq"]
 [ext_resource type="PackedScene" uid="uid://dty416wk84021" path="res://scenes/components/scrollable.tscn" id="3_vf86o"]
@@ -12,7 +11,7 @@ size = Vector2(106, 90)
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("2_vf86o")
-data = ExtResource("2_e4cwf")
+point_value = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1750845810]
 shape = SubResource("RectangleShape2D_frt5n")

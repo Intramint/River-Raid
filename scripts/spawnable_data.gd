@@ -3,4 +3,3 @@ extends Resource
 
 @export var scene: PackedScene
 @export var weight: float
-#point value

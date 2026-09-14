@@ -6,24 +6,26 @@ const MAX_FUEL: float = 100
 const FUEL_CONSUMPTION: float = 3
 
 signal out_of_fuel
+signal points_changed
 
 var fuel: float = MAX_FUEL:
 	set(value):
 		if lost:
 			return
 		else: fuel = clamp(value, 0, MAX_FUEL)
-
 var scroll_speed: int = DEFAULT_SCROLL_SPEED:
 	set(value):
 		if lost:
 			return
 		else:
 			scroll_speed = value
-
 var lost: bool = false
+var points: int = 0:
+	set(value):
+		points = value
+		points_changed.emit()
 
 func _physics_process(delta: float) -> void:
 	fuel -= FUEL_CONSUMPTION * delta
-	print(fuel)
 	if fuel <= 0:
 		out_of_fuel.emit()
