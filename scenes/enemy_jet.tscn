@@ -16,5 +16,5 @@ point_value = 12
 shape = SubResource("RectangleShape2D_odsnx")
 
 [node name="Sprite2D" parent="." index="1" unique_id=1112567087]
-scale = Vector2(64, 10)
+scale = Vector2(62, 10)
 texture = ExtResource("3_ryxjh")
