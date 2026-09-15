@@ -2,8 +2,6 @@ extends Enemy
 
 const SPEED = 600.0
 
-var direction: int = 0
-
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
 

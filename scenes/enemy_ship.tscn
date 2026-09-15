@@ -2,12 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://xvwrbume116p" path="res://scenes/enemy.tscn" id="1_6o8wj"]
 [ext_resource type="Script" uid="uid://t2wi74b140bn" path="res://scripts/enemy_ship.gd" id="2_v70ju"]
+[ext_resource type="Texture2D" uid="uid://bxedkf5qu45r5" path="res://assets/ship.png" id="3_h5p0y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v70ju"]
-size = Vector2(168, 30)
+size = Vector2(152, 30)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v70ju"]
-load_path = "res://.godot/imported/ship.png-0b2a8e7064d2d88a0149f9491a8ea676.ctex"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5p0y"]
+resource_local_to_scene = true
+size = Vector2(152, 50)
 
 [node name="EnemyShip" unique_id=236878738 instance=ExtResource("1_6o8wj")]
 script = ExtResource("2_v70ju")
@@ -16,7 +18,12 @@ point_value = 3
 [node name="CollisionShape2D" parent="." index="0" unique_id=1052039189]
 shape = SubResource("RectangleShape2D_v70ju")
 
-[node name="Sprite2D" parent="." index="1" unique_id=1112567087]
-position = Vector2(0, -6.485)
-scale = Vector2(1.152, 1)
-texture = SubResource("CompressedTexture2D_v70ju")
+[node name="Sprite2D" type="Sprite2D" parent="." index="2" unique_id=1962923958]
+position = Vector2(0, -5.625)
+texture = ExtResource("3_h5p0y")
+
+[node name="CollisionShape2D" parent="Hurtbox" parent_id_path=PackedInt32Array(1551342232) index="0" unique_id=410355476]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_h5p0y")
+
+[editable path="Hurtbox"]

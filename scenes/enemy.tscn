@@ -1,21 +1,32 @@
 [gd_scene format=3 uid="uid://xvwrbume116p"]
 
 [ext_resource type="Script" uid="uid://xevxju2ru8fu" path="res://scripts/enemy.gd" id="1_md0e3"]
-[ext_resource type="Texture2D" uid="uid://dsrutibrfs8k0" path="res://assets/pixel.png" id="2_4ra3w"]
 [ext_resource type="PackedScene" uid="uid://dty416wk84021" path="res://scenes/components/scrollable.tscn" id="3_4ra3w"]
+[ext_resource type="PackedScene" uid="uid://ba234yxw5t3xp" path="res://scenes/components/hurtbox.tscn" id="3_5uy6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
 size = Vector2(86, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4w8v"]
+resource_local_to_scene = true
+size = Vector2(27, 34)
+
 [node name="Enemy" type="CharacterBody2D" unique_id=236878738]
+collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_md0e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1052039189]
 shape = SubResource("RectangleShape2D_frt5n")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1112567087]
-scale = Vector2(86, 14)
-texture = ExtResource("2_4ra3w")
-
 [node name="Scrollable" parent="." unique_id=102370887 instance=ExtResource("3_4ra3w")]
+
+[node name="Hurtbox" parent="." unique_id=1551342232 instance=ExtResource("3_5uy6h")]
+collision_mask = 16
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=410355476]
+shape = SubResource("RectangleShape2D_c4w8v")
+
+[connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
+
+[editable path="Hurtbox"]

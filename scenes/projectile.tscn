@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bbkjhdd0au24j" path="res://scripts/projectile.gd" id="1_qxf0c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
-size = Vector2(2, 20)
+size = Vector2(8, 26)
 
 [node name="Projectile" type="Area2D" unique_id=699353116]
 collision_layer = 16
