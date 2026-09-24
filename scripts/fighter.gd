@@ -20,9 +20,13 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var direction: int = 0
 	if Input.is_action_pressed(move_left):
+		$AnimatedSprite2D.animation = "left"
 		direction -= 1
-	if Input.is_action_pressed(move_right):
+	elif Input.is_action_pressed(move_right):
+		$AnimatedSprite2D.animation = "right"
 		direction += 1
+	else:
+		$AnimatedSprite2D.animation = "default"
 		
 	var motion: Vector2 = Vector2(direction * speed * delta, 0)
 	global_position += motion
