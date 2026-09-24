@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://xvwrbume116p" path="res://scenes/enemy.tscn" id="1_cvxtf"]
 [ext_resource type="Script" uid="uid://cvltacjlt0xyw" path="res://scripts/enemy_jet.gd" id="2_ryxjh"]
-[ext_resource type="Texture2D" uid="uid://bwq0g0td3prya" path="res://assets/white pixel.png" id="3_ryxjh"]
+[ext_resource type="Texture2D" uid="uid://by2nlwuwfursn" path="res://assets/jet.png" id="3_ryxjh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odsnx"]
-size = Vector2(64, 10)
+size = Vector2(54, 8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryxjh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obs6w"]
 resource_local_to_scene = true
-size = Vector2(68, 16)
+size = Vector2(60, 12)
 
 [node name="EnemyJet" unique_id=236878738 instance=ExtResource("1_cvxtf")]
 collision_mask = 0
@@ -20,10 +20,10 @@ point_value = 12
 shape = SubResource("RectangleShape2D_odsnx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="2" unique_id=538769347]
-scale = Vector2(64, 10)
+position = Vector2(-5, 0)
 texture = ExtResource("3_ryxjh")
 
 [node name="CollisionShape2D" parent="Hurtbox" parent_id_path=PackedInt32Array(1551342232) index="0" unique_id=410355476]
-shape = SubResource("RectangleShape2D_ryxjh")
+shape = SubResource("RectangleShape2D_obs6w")
 
 [editable path="Hurtbox"]

@@ -34,18 +34,19 @@ func choose_random_spawnable() -> SpawnableData:
 	return SPAWNABLE_DATA[rng.rand_weighted(spawnable_weights)]
 
 func jet_spawn(data: SpawnableData):
-	var direction: int
+	var flipped: bool
 	var spawn_start: Vector2
 	var spawn_end: Vector2
 	if randf() < 0.5:
-		direction = 1
+		flipped = false
 		spawn_start = $LeftJetSpawnStart.position
 		spawn_end = $LeftJetSpawnStart.position
 	else:
-		direction = -1
+		flipped = true
 		spawn_start = $RightJetSpawnStart.position
 		spawn_end = $RightJetSpawnStart.position
 	#var spawn_point: Vector2 = spawn_start.lerp(spawn_end, randf())
 	var spawn_point = spawn_start
 	var jet = spawn(spawn_point, data)
-	jet.direction = direction
+	if (flipped):
+		jet.flip()

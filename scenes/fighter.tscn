@@ -35,7 +35,7 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ql5yn"]
 resource_local_to_scene = true
-size = Vector2(54, 80)
+size = Vector2(38, 64)
 
 [node name="Fighter" type="Node2D" unique_id=1284100252]
 script = ExtResource("1_umvcx")
