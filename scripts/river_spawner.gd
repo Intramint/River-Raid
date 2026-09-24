@@ -4,8 +4,8 @@ const LEFT_BOUNDARY: float = 150
 const RIGHT_BOUNDARY: float = 1920 - 150
 const MAX_WIDTH: float = 1500
 const MIN_WIDTH: float = 200
-const MAX_Y_OFFSET: float = 20
-const MIN_Y_OFFSET: float = -20
+const MAX_Y_OFFSET: float = 10
+const MIN_Y_OFFSET: float = -10
 
 signal segment_generated(x: Vector2, y: float)
 
