@@ -11,6 +11,6 @@ func _process(delta: float) -> void:
 			$FuelBar.modulate = Color.RED
 	else:
 		$FuelBar.modulate = Color.GREEN
-
+	
 func _on_game_state_points_changed():
 	$ScoreLabel.text = str(GameState.points)

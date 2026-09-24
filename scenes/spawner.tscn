@@ -6,13 +6,13 @@
 script = ExtResource("1_ks1gq")
 
 [node name="LeftJetSpawnStart" type="Marker2D" parent="." unique_id=823227420]
-position = Vector2(-92, -500)
+position = Vector2(-92, -1800)
 
 [node name="LeftJetSpawnEnd" type="Marker2D" parent="." unique_id=1397412585]
-position = Vector2(-92, 804)
+position = Vector2(-92, 352)
 
 [node name="RightJetSpawnStart" type="Marker2D" parent="." unique_id=1635637603]
-position = Vector2(2012, -500)
+position = Vector2(2012, -1800)
 
 [node name="RightJetSpawnEnd" type="Marker2D" parent="." unique_id=1469360046]
-position = Vector2(2012, 804)
+position = Vector2(2012, 352)

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dnd2e7yrwv6ys" path="res://scripts/despawn_zone.gd" id="1_wihgd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
-size = Vector2(2502, 1985)
+size = Vector2(2502, 3103)
 
 [node name="DespawnZone" type="Area2D" unique_id=1047188061]
 collision_layer = 0
@@ -11,7 +11,7 @@ collision_mask = 29
 script = ExtResource("1_wihgd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1172653122]
-position = Vector2(1061, 218.5)
+position = Vector2(1061, -340.5)
 shape = SubResource("RectangleShape2D_frt5n")
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 const SPAWN_CHANCE: float = 0.2
 const OFFSET_FROM_WALL: float = 100
@@ -9,6 +9,7 @@ const SPAWNABLE_DATA: Array[SpawnableData] = [
 	preload("res://assets/resources/jet_data.tres")
 ]
 var spawnable_weights = PackedFloat32Array([])
+var draw_pos: Vector2
 
 func _ready() -> void:
 	for spawnable in SPAWNABLE_DATA:
@@ -40,13 +41,12 @@ func jet_spawn(data: SpawnableData):
 	if randf() < 0.5:
 		flipped = false
 		spawn_start = $LeftJetSpawnStart.position
-		spawn_end = $LeftJetSpawnStart.position
+		spawn_end = $LeftJetSpawnEnd.position
 	else:
 		flipped = true
 		spawn_start = $RightJetSpawnStart.position
-		spawn_end = $RightJetSpawnStart.position
-	#var spawn_point: Vector2 = spawn_start.lerp(spawn_end, randf())
-	var spawn_point = spawn_start
+		spawn_end = $RightJetSpawnEnd.position
+	var spawn_point: Vector2 = spawn_start.lerp(spawn_end, randf())
 	var jet = spawn(spawn_point, data)
 	if (flipped):
 		jet.flip()
