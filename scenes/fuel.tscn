@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c5wdt7opfe6c2"]
 
+[ext_resource type="AudioStream" uid="uid://b4r521ykti16k" path="res://assets/fuel.wav" id="2_col1c"]
 [ext_resource type="Texture2D" uid="uid://gl418g737slh" path="res://assets/fuel.png" id="2_e4cwf"]
 [ext_resource type="Script" uid="uid://bs4jt6j6jkd10" path="res://scripts/fuel.gd" id="2_vf86o"]
 [ext_resource type="PackedScene" uid="uid://dty416wk84021" path="res://scenes/components/scrollable.tscn" id="3_vf86o"]
+[ext_resource type="PackedScene" uid="uid://ic1bfna2jkak" path="res://scenes/components/explodable.tscn" id="4_e4cwf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
 size = Vector2(88, 94)
@@ -12,6 +14,7 @@ collision_layer = 8
 collision_mask = 2
 script = ExtResource("2_vf86o")
 point_value = 6
+pickup_sound = ExtResource("2_col1c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1750845810]
 position = Vector2(1, 0)
@@ -22,5 +25,7 @@ position = Vector2(3, 0)
 texture = ExtResource("2_e4cwf")
 
 [node name="Scrollable" parent="." unique_id=102370887 instance=ExtResource("3_vf86o")]
+
+[node name="Explodable" parent="." unique_id=64719766 instance=ExtResource("4_e4cwf")]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

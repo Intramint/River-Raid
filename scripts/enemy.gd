@@ -17,4 +17,5 @@ func flip():
 
 func _on_hurtbox_hurt(source: Node2D) -> void:
 	GameState.points += point_value
+	$Explodable.explode()
 	queue_free()

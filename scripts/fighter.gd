@@ -11,7 +11,7 @@ signal lost
 @export var shoot: String
 @export var boost: String
 @export var speed: float = 800
-
+@export var shoot_sound: AudioStream
 
 func _ready() -> void:
 	GameState.out_of_fuel.connect(_on_game_state_out_of_fuel)
@@ -33,6 +33,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed(shoot):
 		GameState.points -= 1
+		AudioManager.play(shoot_sound)
 		fired.emit(Vector2(global_position.x, global_position.y + FIRING_OFFSET))
 	
 	if Input.is_action_pressed(boost):
@@ -44,6 +45,7 @@ func reset(new_position: Vector2):
 	position = new_position
 
 func crash():
+	$Explodable.explode()
 	lost.emit()
 	queue_free()
 
@@ -51,6 +53,4 @@ func _on_game_state_out_of_fuel():
 	crash()
 
 func _on_hurtbox_hurt(source: Node2D) -> void:
-	if source is Enemy:
-		source.on_hit()
 	crash()

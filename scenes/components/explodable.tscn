@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ic1bfna2jkak"]
+
+[ext_resource type="Script" uid="uid://ciinyy68dkv4q" path="res://scenes/components/explodable.gd" id="1_by7d0"]
+[ext_resource type="AudioStream" uid="uid://bqc6jxx8v7hv4" path="res://assets/explosion.wav" id="2_gq4bd"]
+
+[node name="Explodable" type="Node" unique_id=64719766]
+script = ExtResource("1_by7d0")
+explode_sound = ExtResource("2_gq4bd")

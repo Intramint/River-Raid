@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://d4j7xe1qi3tfu"]
 
 [ext_resource type="Script" uid="uid://bqcaf2bw0g0qr" path="res://scripts/fighter.gd" id="1_umvcx"]
+[ext_resource type="AudioStream" uid="uid://dspgpp1r0b7ru" path="res://assets/projectile_shoot.wav" id="2_1bj3w"]
 [ext_resource type="Texture2D" uid="uid://caxhpp53cfya6" path="res://assets/fighter.png" id="2_tlqsq"]
 [ext_resource type="PackedScene" uid="uid://ba234yxw5t3xp" path="res://scenes/components/hurtbox.tscn" id="3_38ety"]
 [ext_resource type="Texture2D" uid="uid://2jssfgn7h4dv" path="res://assets/fighter_left.png" id="3_eelhu"]
 [ext_resource type="Texture2D" uid="uid://c73k00f6p3g8t" path="res://assets/fighter_right.png" id="4_1bj3w"]
+[ext_resource type="PackedScene" uid="uid://ic1bfna2jkak" path="res://scenes/components/explodable.tscn" id="6_eelhu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_frt5n"]
 animations = [{
@@ -33,7 +35,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ql5yn"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bj3w"]
 resource_local_to_scene = true
 size = Vector2(38, 64)
 
@@ -43,6 +45,7 @@ move_left = "left"
 move_right = "right"
 shoot = "shoot"
 boost = "boost"
+shoot_sound = ExtResource("2_1bj3w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1045787433]
 z_index = 1
@@ -56,7 +59,9 @@ collision_mask = 5
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=410355476]
 position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_ql5yn")
+shape = SubResource("RectangleShape2D_1bj3w")
+
+[node name="Explodable" parent="." unique_id=64719766 instance=ExtResource("6_eelhu")]
 
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
 

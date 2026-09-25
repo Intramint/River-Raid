@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://xevxju2ru8fu" path="res://scripts/enemy.gd" id="1_md0e3"]
 [ext_resource type="PackedScene" uid="uid://dty416wk84021" path="res://scenes/components/scrollable.tscn" id="3_4ra3w"]
 [ext_resource type="PackedScene" uid="uid://ba234yxw5t3xp" path="res://scenes/components/hurtbox.tscn" id="3_5uy6h"]
+[ext_resource type="PackedScene" uid="uid://ic1bfna2jkak" path="res://scenes/components/explodable.tscn" id="4_5uy6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frt5n"]
 size = Vector2(86, 14)
@@ -22,10 +23,12 @@ shape = SubResource("RectangleShape2D_frt5n")
 [node name="Scrollable" parent="." unique_id=102370887 instance=ExtResource("3_4ra3w")]
 
 [node name="Hurtbox" parent="." unique_id=1551342232 instance=ExtResource("3_5uy6h")]
-collision_mask = 16
+collision_mask = 18
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=410355476]
 shape = SubResource("RectangleShape2D_c4w8v")
+
+[node name="Explodable" parent="." unique_id=64719766 instance=ExtResource("4_5uy6h")]
 
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
 

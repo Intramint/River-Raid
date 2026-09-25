@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.7", "Mobile")
 [autoload]
 
 GameState="*uid://dr1ifmeurlycq"
+AudioManager="*uid://hm15fqj61lf7"
 
 [display]
 
