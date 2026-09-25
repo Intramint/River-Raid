@@ -29,3 +29,9 @@ func _physics_process(delta: float) -> void:
 	fuel -= FUEL_CONSUMPTION * delta
 	if fuel <= 0:
 		out_of_fuel.emit()
+
+func reset():
+	scroll_speed = DEFAULT_SCROLL_SPEED
+	points = 0
+	lost = false
+	fuel = MAX_FUEL
